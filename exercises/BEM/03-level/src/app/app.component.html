@@ -1,0 +1,29 @@
+<header>
+    <img class="logo" src="assets/images/logo.png" alt="logo" routerLink="">
+    <span class="page-title" routerLink="">BEM & CSS Workshop</span>
+</header>
+<div class="content-container">
+    <nav [class.openNavigationBar]="isNavigationBarOpen">
+        <span *ngIf="!isNavigationBarOpen" (click)="openNavigationBar()">
+            <i class="fas fa-bars fa-fw"></i>
+        </span>
+        <span *ngIf="isNavigationBarOpen" (click)="closeNavigationBar()">
+            <i class="fas fa-angle-double-left fa-fw"></i>
+        </span>
+        <span routerLink="" routerLinkActive="active-navigation" [routerLinkActiveOptions]="{exact: true}">
+            <i class="fas fa-home fa-fw" title="Startseite"></i>
+            <span class="navigation-text" *ngIf="isNavigationBarOpen">Startseite</span>
+        </span>
+        <span routerLink="todos" routerLinkActive="active-navigation">
+            <i class="fas fa-clipboard-list fa-fw" title="Aufgaben"></i>
+            <span class="navigation-text" *ngIf="isNavigationBarOpen">Aufgaben</span>
+        </span>
+        <span routerLink="bem-gruide" routerLinkActive="active-navigation">
+            <i class="fas fa-anchor fa-fw" title="BEM Guide"></i>
+            <span class="navigation-text" *ngIf="isNavigationBarOpen">BEM Guide</span>
+        </span>
+    </nav>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+</div>

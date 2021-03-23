@@ -1,0 +1,78 @@
+header {
+    display: flex;
+    text-align: center;
+    background-color: #373277;
+    color: white;
+    height: 64px;
+    padding: 0 16px;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.logo {
+    margin-left: 5px;
+    width: 50px;
+    align-self: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.page-title {
+    font: 500 20px/32px Roboto, Helvetica Neue, sans-serif;
+    align-self: center;
+    padding-left: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.content-container {
+    display: flex;
+    height: calc(100% - 64px);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 65px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background-color: #373277;
+    color: white;
+    flex-shrink: 0;
+}
+
+nav > span {
+    padding: 8px 8px 8px 19px;
+    text-decoration: none;
+    font-size: 21px;
+    display: block;
+    outline: none;
+}
+
+nav span:hover {
+    color: #ffd905;
+    background-color: #23204d;
+    cursor: pointer;
+}
+
+.navigation-text {
+    padding-left: 10px;
+    display: inline;
+}
+
+.openNavigationBar {
+    width: 240px;
+}
+
+.active-navigation {
+    background-color: #ffd905;
+    color: #373277;
+    border-right: solid #ccad00;
+    border-width: 7px;
+}
+
+main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+}

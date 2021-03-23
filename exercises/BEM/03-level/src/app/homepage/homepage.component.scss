@@ -1,0 +1,18 @@
+.homepage-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.info-box {
+    max-width: 50%;
+    margin-right: 30px;
+    flex: 1 1 100%;
+    background-color: rgba(211, 219, 223, 0.6509803921568628);
+    padding: 16px;
+}
+
+.title {
+    font-size: 19px;
+    font-weight: 500;
+}

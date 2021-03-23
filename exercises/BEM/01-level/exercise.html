@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- https://pastebin.com/2Wkybg4r -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM - Übung 1</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a class="active" href="#">Blog</a>
+            </li>
+        </ul>
+    </nav>
+
+    <style>
+        nav {
+            height: 60px;
+            max-width: 1024px;
+            background: orange;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        ul>li {
+            display: inline;
+        }
+
+        a {
+            display: inline-block;
+            padding: .5em 1em;
+            background: blue;
+            color: white;
+        }
+
+        .active {
+            font-weight: bold;
+            color: red;
+            background: grey;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="tab">
+        <button [class.active]="currentTab === 'Block'" (click)="openTabContent('Block')">Block</button>
+        <button [class.active]="currentTab === 'Element'" (click)="openTabContent('Element')">Element</button>
+        <button [class.active]="currentTab === 'Modifier'" (click)="openTabContent('Modifier')">Modifier</button>
+    </div>
+
+    <div class="tabcontent" *ngIf="currentTab === 'Block'">
+        <img class="image" src="/assets/images/block.jpg" alt="Block">
+        <h3>Block</h3>
+        <p>Der Block ist eine HTML-Einheit, die unabhängig von ihrem Einsatzort existiert. Für gewöhnlich enthalten
+            Blöcke HTML-Elemente zur Navigation (nav), zu Kopfzeile (header), Fußzeile (footer) oder zu ungeordneten
+            Listen. Weitere Blöcke können definiert werden, wenn sie Eigenschaften haben, die in einer speziellen
+            Anwendung
+            genutzt werden.</p>
+        <h3>Namenskonvention</h3>
+        <code style="font-size: 19px;">.block{{'{' }}{{'}'}}</code>
+        
+        <div class="link">
+            <a href="https://9elements.com/bem-cheat-sheet/" target="_blank">BEM Naming Cheat Sheet</a>
+        </div>
+
+        <aside class="tip">
+            <img class="tip" src="/assets/images/pencil.png" />
+            <p>
+                My biggest tip for you with CSS is to get lots of practice because it is an incredibly powerful feature
+                of web technology but it can be a little frustrating at times!<br /><br />-- Stephen Moon
+            </p>
+        </aside>
+    </div>
+
+    <div class="tabcontent" *ngIf="currentTab === 'Element'">
+        <img class="image" src="/assets/images/element.jpg" alt="Element">
+        <h3>Element</h3>
+        <p>Die Elemente bestehen auch aus HTML, sind aber an einen Block gebunden, z. B. die Listenelemente
+            <code>&lt;ul&gt;</code> oder <code>&lt;ol&gt;</code> und <code>&lt;li&gt;</code>. Ob ein bestimmtes Objekt
+            auf der Webseite zum Element oder zum Block wird, hängt vom
+            Kontext ab. Soll das Objekt unabhängig vom umgebenden Block genutzt werden, sollte es nicht ein
+            Element, sondern ein Block sein. Umgekehrt, wenn das Objekt nicht wiederverwendet wird und nur im
+            Kontext eines Blocks nutzbar ist, wird es als Element angelegt.
+        </p>
+        <h3>Namenskonvention</h3>
+        <code style="font-size: 19px;">.block__element{{'{' }}{{'}'}}</code>
+
+        <div class="link">
+            <a href="https://9elements.com/bem-cheat-sheet/" target="_blank">BEM Naming Cheat Sheet</a>
+        </div>
+
+        <aside class="tip">
+            <img class="tip" src="/assets/images/pencil.png" />
+            <p>
+                Don't do this: Block__Element__Element or Block__Element--modifier__element<br /><br />-- Rei Yoshizawa
+            </p>
+        </aside>
+    </div>
+
+    <div class="tabcontent" *ngIf="currentTab === 'Modifier'">
+        <img class="image" src="/assets/images/modifier.jpg" alt="Modifier">
+        <h3>Modifier</h3>
+        <p>Modifier werden für kleine Veränderungen in der Gestaltung von Blöcken und Elementen genutzt. Diese
+            Anweisungen gehören zu den HTML-Elementen und sie bestimmen das Aussehen der Website. Beispielsweise
+            betreffen sie das Format einer Schaltfläche, die Farbvariante oder die Größe. Realisiert werden sie über
+            Cascading Style Sheets (CSS). Gute Modifier sind ein wesentlicher Teil von BEM.</p>
+        <h3>Namenskonvention</h3>
+        <code style="font-size: 19px;">.block--modifier{{'{' }}{{'}'}}</code><br />
+        <code style="font-size: 19px;">.block__element--modifier{{'{' }}{{'}'}}</code>
+
+        <div class="link">
+            <a href="https://9elements.com/bem-cheat-sheet/" target="_blank">BEM Naming Cheat Sheet</a>
+        </div>
+
+        <aside class="tip">
+            <img class="tip" src="/assets/images/pencil.png" />
+            <p>
+                Do not add !important to your code as much as possible!<br /><br />-- Rei Yoshizawa
+            </p>
+        </aside>
+    </div>
+</div>

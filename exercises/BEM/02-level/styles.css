@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.container #sidebar {
+    order: 1;
+    width: 200px;
+    background: #d5e3e6;
+}
+
+.container .main {
+    order: 2;
+    width: 100%;
+    padding: 1em;
+}
+
+ul#mainMenu {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+}
+
+ul#mainMenu li.active a {
+    background-color: #eff7f3;
+}
+
+ul#mainMenu li a {
+    text-decoration: none;
+    color: #2a1d30;
+    padding: 10.5px 11px;
+    display: block;
+}
+
+ul#mainMenu li a:visited {
+    color: #807983;
+}
+
+ul#mainMenu li a:hover,
+ul#mainMenu li .current {
+    color: #ef4942;
+    background-color: #fbd9d8;
+}
+
+a.button {
+    background-color: #2a1d30;
+    color: #eff7f3;
+    text-decoration: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}

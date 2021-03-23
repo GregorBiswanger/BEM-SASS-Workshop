@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="wrapper">
+        <header>Aufgaben</header>
+        <form (ngSubmit)="addTodo()">
+            <div class="inputField">
+                <input name="todoInput" type="text" placeholder="Neue Aufgabe hinzufügen..." [(ngModel)]="todoText">
+                <button type="submit"><i class="fas fa-plus"></i></button>
+            </div>
+        </form>
+        <ul class="todoList" *ngFor="let todo of todos; let i = index;">
+            <li>
+                {{todo}} <span class="icon" (click)="removeTodo(i)"><i class="fas fa-trash"></i></span>
+            </li>
+        </ul>
+        <div class="footer">
+            <span>Du hast <span class="pendingTasks">{{todos.length}}</span> ausstehende Aufgaben.</span>
+            <button (click)="clearAllTodos()">Alle löschen</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+body,
+html {
+    margin: 0;
+    height: 100vh;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: #eeeeee;
+    font-family: "Nunito", sans-serif;
+}
+
+a {
+    background: #2c8973;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    display: inline-block;
+    margin-top: 0.5em;
+}
+
+a:hover {
+    background: #267764;
+    color: white;
+}
